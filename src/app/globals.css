@@ -29,6 +29,61 @@ a {
   text-decoration: none;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(5, 6, 15, 0.7);
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  box-shadow: 0 0 18px rgba(244, 211, 94, 0.5);
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.nav a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -115,6 +170,29 @@ main {
   font-size: 14px;
 }
 
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--panel-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tag strong {
+  color: var(--text);
+}
+
 .pdf-frame {
   width: 100%;
   height: 520px;
@@ -160,6 +238,55 @@ main {
   border: 1px dashed var(--panel-border);
   background: rgba(255, 255, 255, 0.04);
   color: var(--muted);
+}
+
+.markdown {
+  background: rgba(5, 8, 20, 0.65);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  color: var(--text);
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.markdown p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.markdown code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.markdown pre {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--panel-border);
+  padding: 14px;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.markdown ul,
+.markdown ol {
+  color: var(--muted);
+  padding-left: 22px;
+}
+
+.markdown a {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

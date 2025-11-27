@@ -52,6 +52,14 @@ export default function HomePage() {
           Legg PDF-filene i <code>public/pdfs</code>, og de dukker opp her
           automatisk. Perfekt for en enkel Vercel-deploy uten ekstra oppsett.
         </p>
+        <div className="tag-grid">
+          <Link className="tag" href="/cheatsheets/comprehensive">
+            <strong>➜</strong> Comprehensive Python cheatsheet
+          </Link>
+          <Link className="tag" href="/cheatsheets/best">
+            <strong>➜</strong> Best Python cheat sheet
+          </Link>
+        </div>
       </section>
 
       {pdfs.length === 0 ? (
