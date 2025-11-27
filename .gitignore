@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# next.js
+.next
+out
+.vercel
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# misc
+.DS_Store
+*.local
